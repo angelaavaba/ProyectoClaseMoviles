@@ -6,5 +6,8 @@
     <string name="third_partial">Tercer Parcial</string>
     <string name="padel_score">Marcador de padel</string>
     <string name="even_or_odd">Par o non</string>
+    <string name="calculate">Calcular</string>
+    <string name="higher_number">Numero Mayor</string>
+
 
 </resources>
