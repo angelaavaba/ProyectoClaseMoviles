@@ -27,5 +27,11 @@ fun FirstPartialView(navController: NavController) {
         Button(onClick = { navController.navigate(route = "evenorodd")}) {
             Text(text = stringResource(id = R.string.even_or_odd))
         }
+        Button(onClick = { navController.navigate(route = "randomcard")}) {
+            Text(text = "Random Card")
+        }
+        Button(onClick = { navController.navigate(route = "highernumber")}) {
+            Text(text = "highernumber")
+        }
     }
 }

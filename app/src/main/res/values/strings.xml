@@ -5,4 +5,8 @@
     <string name="third_partial">Third Patcial</string>
     <string name="padel_score">Padel Score</string>
     <string name="even_or_odd">Even or odd</string>
+    <string name="calculate">Calculate</string>
+    <string name="higher_number">Higher Number</string>
+
+
 </resources>
