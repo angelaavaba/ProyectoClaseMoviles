@@ -12,4 +12,5 @@ sealed class NavRoutes (val route: String){
     object evenorodd : NavRoutes("evenorodd")
     object randomcard : NavRoutes("randomcard")
     object highernumber: NavRoutes("highernumber")
+    object nailsalon: NavRoutes("nailsalon")
 }
