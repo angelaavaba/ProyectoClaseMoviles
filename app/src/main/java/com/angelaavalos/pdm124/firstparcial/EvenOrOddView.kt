@@ -1,8 +1,6 @@
 package com.angelaavalos.pdm124
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
@@ -15,8 +13,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import com.angelaavalos.pdm124.firstparcial.EvenOrOddViewModel
+import com.angelaavalos.pdm124.ui.theme.utils.ComposeLottieAnimation
+import com.angelaavalos.pdm124.ui.theme.utils.ComposeLottieAnimation1
 
 @Composable
 fun EvenorOddView(navController: NavController, viewModel: EvenOrOddViewModel) {
@@ -32,6 +33,12 @@ fun EvenorOddView(navController: NavController, viewModel: EvenOrOddViewModel) {
         verticalArrangement = Arrangement.Center
 
     ) {
+        if (viewModel.evenOroddAnimation.value == true){
+            ComposeLottieAnimation(modifier = Modifier.height(200.dp).width(200.dp))
+        }else{
+            ComposeLottieAnimation1(modifier = Modifier.height(200.dp).width(200.dp))
+        }
+
         Text(
             text = stringResource(id = R.string.even_or_odd),
             color = MaterialTheme.colors.secondary
@@ -47,6 +54,7 @@ fun EvenorOddView(navController: NavController, viewModel: EvenOrOddViewModel) {
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
         Text(text = "${evenOrOddStatus}")
+
 
     }
 }

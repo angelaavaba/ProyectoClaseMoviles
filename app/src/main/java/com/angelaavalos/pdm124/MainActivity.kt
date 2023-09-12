@@ -83,6 +83,9 @@ fun NavigationHost(navController: NavHostController) {
         composable(NavRoutes.highernumber.route){
            HigherNumberView(navController = navController, viewModel = HigherNumberViewModel())
         }
+        composable(NavRoutes.nailsalon.route){
+            SalonView(navController = navController, viewModel = SalonViewModel())
+        }
     }
 }
 

@@ -32,6 +32,7 @@ fun HigherNumberView(navController: NavController, viewModel: HigherNumberViewMo
     ) {
         Text(
             text = stringResource(id = R.string.higher_number
+
             ),
             color = MaterialTheme.colors.secondary
         )
