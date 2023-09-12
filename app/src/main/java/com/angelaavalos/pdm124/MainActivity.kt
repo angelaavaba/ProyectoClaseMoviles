@@ -10,12 +10,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.angelaavalos.pdm124.firstparcial.*
 import com.angelaavalos.pdm124.navigation.NavBarItems
 import com.angelaavalos.pdm124.navigation.NavRoutes
 import com.angelaavalos.pdm124.ui.theme.*
@@ -73,7 +75,13 @@ fun NavigationHost(navController: NavHostController) {
             PadelScoreView(navController = navController)
         }
         composable(NavRoutes.evenorodd.route){
-            EvenorOddView(navController = navController)
+            EvenorOddView(navController = navController, viewModel = EvenOrOddViewModel())
+        }
+        composable(NavRoutes.randomcard.route){
+            RandomCardView(navController = navController, viewModel = RamdomCardViewModel())
+        }
+        composable(NavRoutes.highernumber.route){
+           HigherNumberView(navController = navController, viewModel = HigherNumberViewModel())
         }
     }
 }

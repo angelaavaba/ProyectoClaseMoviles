@@ -21,5 +21,6 @@ object NavBarItems {
             image = Icons.Filled.Star,
             route = "thirdpartial"
         )
+
     )
 }
