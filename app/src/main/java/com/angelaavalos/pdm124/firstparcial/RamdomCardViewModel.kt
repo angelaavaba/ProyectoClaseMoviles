@@ -6,13 +6,17 @@ import com.angelaavalos.pdm124.R
 
 class RamdomCardViewModel: ViewModel(){
 
+    // Variable para almacenar el ID de la carta
     var cardId = MutableLiveData(R.drawable.back)
+    // Función para obtener el ID de la carta
     fun cardResult(): MutableLiveData<Int> = cardId
 
-
+    // Función para generar una carta aleatoria
     fun ramdomcard(){
+        // Genera un número aleatorio entre 0 y 12
         val rnds = (0..12).random()
 
+        // Asigna el recurso de imagen correspondiente según el número aleatorio
         when(rnds){
             0 -> cardId.postValue(R.drawable.h01)
             1 -> cardId.postValue(R.drawable.h02)
@@ -31,6 +35,7 @@ class RamdomCardViewModel: ViewModel(){
         }
 
     }
+    // Función para ocultar la carta
     fun hide(){
         cardId.postValue(R.drawable.back)
     }
