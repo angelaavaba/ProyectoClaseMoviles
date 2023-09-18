@@ -12,29 +12,32 @@ class SalonViewModel : ViewModel() {
     // LiveData para el resultado final
     private val totalCost = MutableLiveData(0)
 
+    // Funciones para obtener los LiveData
     fun getPedicureCount(): LiveData<Int> = pedicureCount
     fun getNailsCount(): LiveData<Int> = nailsCount
     fun getNailsPedicureCount(): LiveData<Int> = nailsPedicureCount
     fun getTotalCost(): LiveData<Int> = totalCost
 
+    // Función para incrementar el contador de pedicuras
     fun incrementPedicure() {
         val currentCount = pedicureCount.value ?: 0
         pedicureCount.value = currentCount + 1
         calculateTotalCost()
     }
-
+    // Función para incrementar el contador de uñas
     fun incrementNails() {
         val currentCount = nailsCount.value ?: 0
         nailsCount.value = currentCount + 1
         calculateTotalCost()
     }
-
+    // Función para incrementar el contador de uñas + pedicuras
     fun incrementNailsPedicure() {
         val currentCount = nailsPedicureCount.value ?: 0
         nailsPedicureCount.value = currentCount + 1
         calculateTotalCost()
     }
 
+    // Función para calcular el costo total
     private fun calculateTotalCost() {
         val pedicureCost = (pedicureCount.value ?: 0) * 350
         val nailsCost = (nailsCount.value ?: 0) * 450

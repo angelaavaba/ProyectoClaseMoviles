@@ -3,10 +3,37 @@
     <string name="first_partial">First Patcial</string>
     <string name="second_partial">Second Patcial</string>
     <string name="third_partial">Third Patcial</string>
+
+    //padel
     <string name="padel_score">Padel Score</string>
+
+    //even or odd
     <string name="even_or_odd">Even or odd</string>
+    <string name="even">Even</string>
+    <string name="odd">Odd</string>
+
+    //Random Card
+    <string name="random_card">Random Card</string>
+    <string name="hide">Hide</string>
+    <string name="random">Random</string>
+
+
+    //higher number
     <string name="calculate">Calculate</string>
     <string name="higher_number">Higher Number</string>
+
+    //Hair salon
+    <string name="nail_salon">Nail Salon </string>
+    <string name="total">Total </string>
+
+    //Partial Test
+    <string name="firstpartialtest">First Partial Test</string>
+    <string name="totalproduction">Total Production</string>
+    <string name="actualproduction">Actual Production</string>
+    <string name="apples">Apples</string>
+    <string name="percentage">Percentage</string>
+    <string name="calculatepercentage">Calculate Percentage</string>
+
 
 
 </resources>

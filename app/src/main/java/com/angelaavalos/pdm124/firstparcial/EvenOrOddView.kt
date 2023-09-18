@@ -33,12 +33,12 @@ fun EvenorOddView(navController: NavController, viewModel: EvenOrOddViewModel) {
         verticalArrangement = Arrangement.Center
 
     ) {
+        // Animación basada en el valor de la propiedad evenOroddAnimation del ViewModel
         if (viewModel.evenOroddAnimation.value == true){
             ComposeLottieAnimation(modifier = Modifier.height(200.dp).width(200.dp))
         }else{
             ComposeLottieAnimation1(modifier = Modifier.height(200.dp).width(200.dp))
         }
-
         Text(
             text = stringResource(id = R.string.even_or_odd),
             color = MaterialTheme.colors.secondary
@@ -48,6 +48,7 @@ fun EvenorOddView(navController: NavController, viewModel: EvenOrOddViewModel) {
             onValueChange = {
                 txtNumber = it
                 if (txtNumber != "") {
+                    // Calcula si el número es par o impar
                     viewModel.calculateEvenOrOdd(txtNumber.toInt())
                 }
             },

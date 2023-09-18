@@ -10,7 +10,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -63,7 +62,7 @@ fun NavigationHost(navController: NavHostController) {
         startDestination = NavRoutes.firstpartial.route
     ) {
         composable(NavRoutes.firstpartial.route) {
-            FirstPartialView(navController = navController)
+            FirstPartialView(navController = navController, viewModel = FirstPartialTestViewModel())
         }
         composable(NavRoutes.secondpartial.route) {
             SecondPartialView()
@@ -86,6 +85,10 @@ fun NavigationHost(navController: NavHostController) {
         composable(NavRoutes.nailsalon.route){
             SalonView(navController = navController, viewModel = SalonViewModel())
         }
+        composable(NavRoutes.firstpartialtest.route){
+            FirstPartialTestView(navController = navController, viewModel = FirstPartialTestViewModel())
+        }
+
     }
 }
 

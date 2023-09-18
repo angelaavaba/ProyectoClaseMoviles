@@ -18,7 +18,7 @@ import com.angelaavalos.pdm124.R
 
 @Composable
 fun HigherNumberView(navController: NavController, viewModel: HigherNumberViewModel) {
-
+    // Variables para almacenar los valores de entrada de texto
     var txtNumber1 by remember { mutableStateOf("") }
     var txtNumber2 by remember { mutableStateOf("") }
     var txtNumber3 by remember { mutableStateOf("") }
@@ -31,9 +31,7 @@ fun HigherNumberView(navController: NavController, viewModel: HigherNumberViewMo
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = stringResource(id = R.string.higher_number
-
-            ),
+            text = stringResource(id = R.string.higher_number),
             color = MaterialTheme.colors.secondary
         )
         TextField(
@@ -62,13 +60,15 @@ fun HigherNumberView(navController: NavController, viewModel: HigherNumberViewMo
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number),
 
             )
+        // Botón para calcular el número mayor
         Button(
             onClick = {
                 viewModel.maxOf(txtNumber1.toDouble(),txtNumber2.toDouble(),txtNumber3.toDouble())
+                // Actualiza el valor más alto (resultado) del ViewModel
                 viewModel.getHigher() },
             modifier = Modifier.padding(8.dp)
         ) {
-
+            Text(text = stringResource(id = R.string.higher_number))
         }
         Text(text = "${higherStatus}")
     }

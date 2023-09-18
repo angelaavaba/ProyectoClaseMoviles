@@ -11,6 +11,7 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontWeight
@@ -18,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.angelaavalos.pdm124.R
+
 
 @Composable
 fun SalonView(navController: NavController, viewModel: SalonViewModel) {
@@ -83,7 +86,7 @@ fun SalonView(navController: NavController, viewModel: SalonViewModel) {
                 Text(text = "${pedicureNailCountResult}")
             }
         }
-            Text(text = "Total: $totalCostResult",
+            Text(text = stringResource(id = R.string.total) + " " +"${totalCostResult}",
                 modifier = Modifier.padding(top = 16.dp),
                 style = TextStyle(fontWeight = FontWeight.Bold,
                     fontSize = 30.sp)

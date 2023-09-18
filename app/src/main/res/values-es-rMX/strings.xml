@@ -4,10 +4,35 @@
     <string name="first_partial">Primer Parcial</string>
     <string name="second_partial">Segundo Parcial</string>
     <string name="third_partial">Tercer Parcial</string>
+
+   //padel
     <string name="padel_score">Marcador de padel</string>
+
+    //even or odd
     <string name="even_or_odd">Par o non</string>
+    <string name="even">Par</string>
+    <string name="odd">Non</string>
+
+    //Random Card
+    <string name="random_card">Carta Aleatoria</string>
+    <string name="hide">Ocultar</string>
+    <string name="random">Aleatoria</string>
+
+    //higher number
     <string name="calculate">Calcular</string>
     <string name="higher_number">Numero Mayor</string>
+
+    //Hair Salon
+    <string name="nail_salon">Salon de uñas </string>
+    <string name="total">Total </string>
+
+    //Partial Test
+    <string name="firstpartialtest">Examen Primer Parcial</string>
+    <string name="totalproduction">Producción Total</string>
+    <string name="actualproduction">Producción Actual</string>
+    <string name="apples">Manzanas</string>
+    <string name="percentage">Porcentaje</string>
+    <string name="calculatepercentage">Calcular Porcentaje</string>
 
 
 </resources>
