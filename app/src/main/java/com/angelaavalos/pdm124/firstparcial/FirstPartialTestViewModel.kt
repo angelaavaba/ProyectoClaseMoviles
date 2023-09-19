@@ -27,13 +27,13 @@ class FirstPartialTestViewModel {
     }
 
     // Función para agregar producción actual y calcular el porcentaje
-    fun addActualProduction(lot: Int) {
+    fun addActualProduction(lot: Int):Int {
         // Obtiene el valor actual de producción
         val currentProduction = actualProduction.value ?:0
         // Suma el valor del lote al valor actual
         actualProduction.value = currentProduction + lot
         // Calcula el porcentaje de producción
-        calculatePercentage()
+        return currentProduction + lot
     }
 
     // Función para calcular el porcentaje de producción y actualizar la pantalla roja según ciertos criterios

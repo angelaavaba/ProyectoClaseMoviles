@@ -29,7 +29,6 @@ import com.angelaavalos.pdm124.R
 fun FirstPartialTestView(navController: NavController, viewModel: FirstPartialTestViewModel) {
     var totalproduct by remember { mutableStateOf("") }
     var actualproduct by remember { mutableStateOf("") }
-    var actualProductionValue by remember { mutableStateOf(0) }
     // Obtener el porcentaje de producción del ViewModel
     val percentProductState = viewModel.percent.observeAsState(0.0)
     // Obtener el estado de redScreen del ViewModel
@@ -129,37 +128,25 @@ fun FirstPartialTestView(navController: NavController, viewModel: FirstPartialTe
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Button(onClick = {
-                viewModel.addActualProduction(5)
-                val newValue = actualProductionValue + 5
-                actualProductionValue = newValue
-                actualproduct = newValue.toString()
+                actualproduct =  viewModel.addActualProduction(5).toString()
             }) {
                 Text(text = "+5")
             }
             Spacer(modifier = Modifier.width(12.dp))
             Button(onClick = {
-                viewModel.addActualProduction(15)
-                val newValue = actualProductionValue + 15
-                actualProductionValue = newValue
-                actualproduct = newValue.toString()
+                actualproduct =  viewModel.addActualProduction(15).toString()
             }) {
                 Text(text = "+15")
             }
             Spacer(modifier = Modifier.width(12.dp))
             Button(onClick = {
-                viewModel.addActualProduction(30)
-                val newValue = actualProductionValue + 30
-                actualProductionValue = newValue
-                actualproduct = newValue.toString()
+                actualproduct =  viewModel.addActualProduction(30).toString()
             }) {
                 Text(text = "+30")
             }
             Spacer(modifier = Modifier.width(12.dp))
             Button(onClick = {
-                viewModel.addActualProduction(50)
-                val newValue = actualProductionValue + 50
-                actualProductionValue = newValue
-                actualproduct = newValue.toString()
+                actualproduct =  viewModel.addActualProduction(50).toString()
             }) {
                 Text(text = "+50")
             }
